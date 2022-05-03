@@ -9,6 +9,7 @@ server:
 eureka:
   instance:
     hostname: iZ8vbdwu37doekt78hn1goZ
+    prefer-ip-address: true
   client:
     service-url:
       defaultZone: http://8.142.84.98:8762/eureka/
@@ -22,6 +23,7 @@ server:
 eureka:
   instance:
     hostname: iZ8vbgpdral5u703fjclzlZ
+    prefer-ip-address: true
   client:
     service-url:
       defaultZone: http://39.103.180.84:8761/eureka/
