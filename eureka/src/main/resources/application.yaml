@@ -21,7 +21,7 @@ server:
 
 eureka:
   instance:
-    hostname: http://iZ8vbdwu37doekt78hn1goZ:8762/eureka/
+    hostname: iZ8vbdwu37doekt78hn1goZ
   client:
     service-url:
       defaultZone: http://peer1:8761/eureka/
