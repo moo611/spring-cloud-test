@@ -10,7 +10,7 @@ eureka:
     hostname: peer1
   client:
     service-url:
-      defaultZone: http://root:123456@peer2:8762/eureka/
+      defaultZone: http://peer2:8762/eureka/
 
 ---
 spring:
@@ -25,7 +25,6 @@ eureka:
     hostname: peer2
   client:
     service-url:
-      defaultZone: http://root:123456@peer1:8761/eureka/
-
+      defaultZone: http://peer1:8761/eureka/
 
 
