@@ -8,10 +8,10 @@ server:
   port: 8761
 eureka:
   instance:
-    hostname: peer1
+    hostname: iZ8vbdwu37doekt78hn1goZ
   client:
     service-url:
-      defaultZone: http://iZ8vbdwu37doekt78hn1goZ:8762/eureka/
+      defaultZone: http://iZ8vbgpdral5u703fjclzlZ:8762/eureka/
 
 ---
 spring:
@@ -21,9 +21,9 @@ server:
 
 eureka:
   instance:
-    hostname: iZ8vbdwu37doekt78hn1goZ
+    hostname: iZ8vbgpdral5u703fjclzlZ
   client:
     service-url:
-      defaultZone: http://peer1:8761/eureka/
+      defaultZone: http://iZ8vbdwu37doekt78hn1goZ:8761/eureka/
 
 
