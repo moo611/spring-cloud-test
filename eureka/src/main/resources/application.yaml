@@ -1,12 +1,8 @@
+---
 spring:
   application:
-    name: SpringCloud-Center
-  security:
-    user:
-      name: root
-      password: 123456
-
----
+    name: master
+  profiles: peer1
 server:
   port: 8761
 eureka:
@@ -15,9 +11,12 @@ eureka:
   client:
     service-url:
       defaultZone: http://root:123456@peer2:8762/eureka/
-spring:
-  profiles: peer1
+
 ---
+spring:
+  application:
+    name: slave
+  profiles: peer2
 server:
   port: 8762
 
@@ -27,7 +26,6 @@ eureka:
   client:
     service-url:
       defaultZone: http://root:123456@peer1:8761/eureka/
-spring:
-  profiles: peer2
+
 
 
