@@ -1,0 +1,10 @@
+server:
+  port: 80
+spring:
+  application:
+    name: SpringCloud-Consumer
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:123456@peer1:8761/eureka/,http://root:123456@peer2:8762/eureka/,http://root:123456@peer3:8763/eureka/
+

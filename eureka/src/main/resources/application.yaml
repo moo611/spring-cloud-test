@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: SpringCloud-Center
+  security:
+    user:
+      name: root
+      password: 123456
+
+---
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: iZ8vbdwu37doekt78hn1goZ
+  client:
+    service-url:
+      defaultZone: http://root:123456@iZ8vbdwu37doekt78hn1goZ:8762/eureka/
+spring:
+  profiles: peer1
+---
+server:
+  port: 8762
+
+eureka:
+  instance:
+    hostname: iZ8vbgpdral5u703fjclzlZ
+  client:
+    service-url:
+      defaultZone: http://root:123456@iZ8vbgpdral5u703fjclzlZ:8761/eureka/
+spring:
+  profiles: peer2
+
+

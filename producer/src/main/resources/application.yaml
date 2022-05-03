@@ -1,0 +1,13 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: SpringCloud-Producer
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:123456@peer1:8761/eureka/,http://root:123456@peer2:8762/eureka/,http://root:123456@peer3:8763/eureka/
+    healthcheck:
+      enabled: true
+
