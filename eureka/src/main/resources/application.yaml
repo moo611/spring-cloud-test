@@ -1,7 +1,8 @@
----
 spring:
   application:
-    name: master
+    name: server
+---
+spring:
   profiles: peer1
 server:
   port: 8761
@@ -14,8 +15,6 @@ eureka:
 
 ---
 spring:
-  application:
-    name: slave
   profiles: peer2
 server:
   port: 8762
