@@ -6,7 +6,7 @@ import org.springframework.web.client.RestTemplate;
 
 @Service
 public class TestService {
-    public static String SERVIER_NAME = "SpringCloud-Producer";
+    public static String SERVIER_NAME = "eureka-producer";
 
     @Autowired
     private RestTemplate restTemplate;
