@@ -25,7 +25,7 @@ public class TestController {
 
     @GetMapping("/log")
     public void log(){
-        ServiceInstance serviceInstance = loadBalancerClient.choose("SpringCloud-Producer");
+        ServiceInstance serviceInstance = loadBalancerClient.choose("eureka-producer");
         System.out.println(serviceInstance.getHost()+":"+serviceInstance.getPort());
 
     }
