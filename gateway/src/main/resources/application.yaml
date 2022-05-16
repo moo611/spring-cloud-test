@@ -1,0 +1,16 @@
+server:
+  port: 80
+spring:
+  application:
+    name: api-gateway
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/
+zuul:
+  routes:
+    user-service:
+      path: /users/**
+    test-service:
+      path: /test/**
+

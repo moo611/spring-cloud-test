@@ -1,0 +1,17 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: test-service
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/
+
+feign:
+  client:
+    config:
+      default:
+        loggerLevel: basic
+  hystrix:
+    enabled: true
