@@ -7,24 +7,23 @@
         <artifactId>spring-cloud-test</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>user_service</artifactId>
+
+    <artifactId>config_server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>user_service</name>
+    <name>config_server</name>
     <description>Demo project for Spring Boot</description>
 
     <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-config-server</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-config</artifactId>
-        </dependency>
+
     </dependencies>
     <dependencyManagement>
         <dependencies>
