@@ -32,3 +32,6 @@ build/
 ### VS Code ###
 .vscode/
 .DS_Store
+
+
+config_server/src/main/resources/application-remote.yml
