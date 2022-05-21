@@ -10,7 +10,7 @@ spring:
       server:
         git:
           uri: https://github.com/moo611/resource_center.git
-          username: moo611
+          username: 123
           password: 123456
           clone-on-start: true #开启启动时直接从git获取配置
 
