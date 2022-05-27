@@ -4,7 +4,20 @@ spring:
   cloud:
     config:
       uri: http://localhost:9005
-      label: main
+      label: master
       profile: dev
       name: test
-
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: test
+    password: test
+# 处理jvm信息
+management:
+  endpoints:
+    web:
+      exposure:
+        include:  bus-refresh
+  endpoint:
+    bus-refresh:
+      enabled: true

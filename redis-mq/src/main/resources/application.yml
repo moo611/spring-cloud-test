@@ -1,0 +1,16 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: redis-mq
+  redis:
+    host: 127.0.0.1
+    password:
+    port: 6379
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/
+
+
+
