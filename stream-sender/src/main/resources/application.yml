@@ -1,0 +1,16 @@
+server:
+  port: 8087
+spring:
+  application:
+    name: stream-sender
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: test
+    password: test
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/
+
+

@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: rabbit-mq
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: 127.0.0.1:9092
+          min-partition-count: 1
+          auto-create-topics: true
+          auto-add-partitions: true
+      bindings:
+        testa:
+          destination: test_spring_stream
+          group: group-1
+          consumer:
+            concurrency: 1
+            partitioned: fasle
+        sourceA:
+          destination: test_spring_stream
+          producer:
+            partitionCount: 1
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/
+server:
+  port: 8086
+
+
