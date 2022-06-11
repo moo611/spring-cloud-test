@@ -6,7 +6,10 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/my_db?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: jindesong
-
+  redis:
+    host: 127.0.0.1
+    password:
+    port: 6379
 logging:
   level:
     com.spring.auth_server.dao: debug
