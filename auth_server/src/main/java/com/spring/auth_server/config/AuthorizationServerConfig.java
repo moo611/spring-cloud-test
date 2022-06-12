@@ -47,6 +47,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     private JwtTokenEnhancer jwtTokenEnhancer;
 
     /**
+     * 授权服务断点：配置授权码和令牌的管理/存储方式
      * 使用密码模式需要配置
      */
     @Override
@@ -64,8 +65,12 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 
     }
 
+    /**
+     * 配置oauth/check_token,oauth/token_key端点是否放行
+     * @param oauthServer
+     * @throws Exception
+     */
     @Override
-
     public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception {
         //允许表单认证
         oauthServer.allowFormAuthenticationForClients();
@@ -73,7 +78,11 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 
     }
 
-
+    /**
+     * 客户端详情：配置客户端请求的参数
+     * @param clients
+     * @throws Exception
+     */
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients.inMemory()

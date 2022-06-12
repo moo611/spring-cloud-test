@@ -7,6 +7,9 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.R
 import org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer;
 import org.springframework.security.oauth2.provider.token.RemoteTokenServices;
 
+/**
+ * 如果同时配置了ResourceServerConfigurerAdapter和WebSecurityAdapter,前者会覆盖后者，因为前者的order小于后者，order越小优先级越高
+ */
 @Configuration
 @EnableResourceServer
 public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
